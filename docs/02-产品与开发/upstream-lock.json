@@ -1,0 +1,21 @@
+{
+  "checked_date": "2026-10-19",
+  "repositories": [
+    {
+      "repository": "78/xiaozhi-esp32",
+      "commit": "17188094940a33c1ef5304b6ac276ae581d37a33",
+      "destination": "firmware/xiaozhi-esp32",
+      "files": 1745,
+      "verified": 1745,
+      "failures": []
+    },
+    {
+      "repository": "xinnan-tech/xiaozhi-esp32-server",
+      "commit": "eb9dc8ca0fc8a30bc8afb0f302dcfc1578f76a7b",
+      "destination": "services/xiaozhi-esp32-server",
+      "files": 1624,
+      "verified": 1624,
+      "failures": []
+    }
+  ]
+}

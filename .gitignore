@@ -1,0 +1,36 @@
+# Local configuration and secrets
+config/local.*
+!config/local.example.yaml
+config/*.secret.*
+!.example
+*.env
+!.env.example
+
+# Runtime data and logs
+data/*
+logs/*
+!.gitkeep
+
+# Python
+.venv/
+.venv-dev/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Tool caches
+.firecrawl/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / OS
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+# Git metadata used only while recovering upstream snapshots
+firmware/*-source/
+services/*-source/
+tools/python*/
+tools/native/
+tools/installers/

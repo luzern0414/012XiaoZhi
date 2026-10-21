@@ -1,0 +1,26 @@
+[
+  {
+    "name": "78/xiaozhi-esp32",
+    "url": "https://github.com/78/xiaozhi-esp32",
+    "branch": "main",
+    "commit": "17188094940a33c1ef5304b6ac276ae581d37a33",
+    "license": "MIT",
+    "role": "ESP32 firmware",
+    "path": "firmware/xiaozhi-esp32"
+  },
+  {
+    "name": "xinnan-tech/xiaozhi-esp32-server",
+    "url": "https://github.com/xinnan-tech/xiaozhi-esp32-server",
+    "branch": "main",
+    "commit": "eb9dc8ca0fc8a30bc8afb0f302dcfc1578f76a7b",
+    "license": "MIT",
+    "role": "Local backend, Python / Java / Vue",
+    "path": "services/xiaozhi-esp32-server"
+  },
+  {
+    "name": "huangjunsen0406/py-xiaozhi",
+    "url": "https://github.com/huangjunsen0406/py-xiaozhi",
+    "license": "MIT",
+    "role": "Desktop client reference; not downloaded"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "python": {
+    "version": "3.10.11",
+    "url": "https://www.python.org/ftp/python/3.10.11/python-3.10.11-amd64.exe",
+    "sha256": "d8dede5005564b408ba50317108b765ed9c3c510342a598f9fd42681cbe0648b"
+  },
+  "model": {
+    "url": "https://modelscope.cn/models/iic/SenseVoiceSmall/resolve/master/model.pt",
+    "sha256": "833ca2dcfdf8ec91bd4f31cfac36d6124e0c459074d5e909aec9cabe6204a3ea",
+    "target": "data/models/SenseVoiceSmall/model.pt"
+  },
+  "opus": {
+    "url": "https://api.anaconda.org/download/conda-forge/libopus/1.5.2/win-64/libopus-1.5.2-h2466b09_0.conda",
+    "sha256": "4c5e04de758450f9427a75095a54957de521b57234711374fac1cdc89fc7a9ca"
+  },
+  "ffprobe": {
+    "url": "https://registry.npmjs.org/@ffprobe-installer/win32-x64/-/win32-x64-5.1.0.tgz",
+    "sha512_integrity": "jMGYeAgkrdn4e2vvYt/qakgHRE3CPju4bn5TmdPfoAm1BlX1mY9cyMd8gf5vSzI8gH8Zq5WQAyAkmekX/8TSTg=="
+  },
+  "torch": {
+    "url": "https://mirrors.aliyun.com/pypi/packages/3a/81/684d99e536b20e869a7c1222cf1dd233311fb05d3628e9570992bfb65760/torch-2.2.2-cp310-cp310-win_amd64.whl",
+    "sha256": "11e8fe261233aeabd67696d6b993eeb0896faa175c6b41b9a6c9f0334bdad1c5",
+    "filename": "torch-2.2.2-cp310-cp310-win_amd64.whl"
+  },
+  "installed_sha256": {
+    "tools/native/ffmpeg.exe": "2ce797a0f88d7f067180338fb227f7b1928ea727bd9a4d7a1d022f7c52af71a3",
+    "tools/native/ffprobe.exe": "f28c4751e7367205267025aaf0fcfc921e34d9b7edaa46bd9c8abaf367fc9051",
+    "tools/native/opus.dll": "0700b5e3ba298f5e7d47af83139caa570f9321050b5358bda929d30a6636b9b4"
+  }
+}

@@ -1,0 +1,52 @@
+# Native xiaozhi-server overlay. Copy to config/local.server.yaml.
+# scripts/start-server.ps1 copies it to the upstream data/.config.yaml.
+server:
+  ip: 0.0.0.0
+  port: 8000
+  http_port: 8003
+  # Replace LAN_IP with an IPv4 address reachable from your ESP32 Wi-Fi.
+  websocket: ws://LAN_IP:8000/xiaozhi/v1/
+  vision_explain: http://LAN_IP:8003/mcp/vision/explain
+  timezone_offset: 8
+  auth:
+    enabled: false
+    allowed_devices: []
+selected_module:
+  VAD: SileroVAD
+  ASR: FunASR
+  LLM: LunaLLM
+  VLLM: ChatGLMVLLM
+  TTS: EdgeTTS
+  Memory: nomem
+  Intent: nointent
+LLM:
+  LunaLLM:
+    type: openai
+    model_name: gpt-6-luna
+    base_url: https://YOUR_OPENAI_COMPATIBLE_HOST/v1
+    api_key: ""
+    max_tokens: 256
+    temperature: 0.7
+prompt: |
+  你是小智，一位友好、准确的中文语音助手。默认使用简体中文，口语自然，回答简短。
+  当前服务端运行在用户的 Windows 电脑：SenseVoice 在本地识别语音，gpt-6-luna 通过联网 API 生成回答，EdgeTTS 通过网络合成语音。
+  对话文本会发送给配置的大模型服务，待合成文本会发送给语音合成服务。不要声称系统完全离线或所有内容都不会离开电脑。
+  不要编造工具能力、联网搜索结果或硬件连接状态；不确定时如实说明。
+voiceprint: null
+prompt_template: ../../../../config/prompt.jinja2
+ASR:
+  FunASR:
+    type: fun_local
+    model_dir: ../../../../data/models/SenseVoiceSmall
+    output_dir: ../../../../data/server/audio
+TTS:
+  EdgeTTS:
+    type: edge
+    voice: zh-CN-XiaoxiaoNeural
+    output_dir: ../../../../data/server/audio
+log:
+  log_level: INFO
+  # Relative to services/xiaozhi-esp32-server/main/xiaozhi-server.
+  log_dir: ../../../../logs/server
+  log_file: server.log
+  data_dir: ../../../../data/server
